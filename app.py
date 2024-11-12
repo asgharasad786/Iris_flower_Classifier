@@ -15,7 +15,7 @@ df, target_names = load_iris_data()
 model = RandomForestClassifier()
 model.fit(df.drop('target', axis=1), df['target'])
 
-st.sidebar.title('Iris Flower Classifier')
+st.sidebar.title('Select the Following to Classify Flower type')
 sepal_length = st.sidebar.slider('Sepal Length', float(df['sepal length (cm)'].min()), float(df['sepal length (cm)'].max()))
 sepal_width = st.sidebar.slider('Sepal Width', float(df['sepal width (cm)'].min()), float(df['sepal width (cm)'].max()))
 petal_length = st.sidebar.slider('Petal Length', float(df['petal length (cm)'].min()), float(df['petal length (cm)'].max()))
